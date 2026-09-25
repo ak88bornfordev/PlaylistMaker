@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Playlist Maker</string>
+
+    <!-- Main screen -->
+    <string name="main_title">Playlist maker</string>
+    <string name="search">Search</string>
+    <string name="media_library">Media library</string>
+    <string name="settings">Settings</string>
+
+    <!-- Settings screen -->
+    <string name="back">Back</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="share_app">Share the app</string>
+    <string name="write_to_support">Contact support</string>
+    <string name="user_agreement">User agreement</string>
+</resources>

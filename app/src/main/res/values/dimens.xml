@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Общие отступы -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+
+    <!-- Шапка экрана -->
+    <dimen name="header_height">56dp</dimen>
+    <dimen name="header_text_size">22sp</dimen>
+    <!-- Отступ между шапкой и контентом, используется на обоих экранах -->
+    <dimen name="content_top_padding">24dp</dimen>
+
+    <!-- Главный экран -->
+    <dimen name="main_button_text_size">22sp</dimen>
+    <dimen name="main_button_corner_radius">16dp</dimen>
+
+    <!-- Экран настроек -->
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="settings_row_height">61dp</dimen>
+    <dimen name="settings_text_size">16sp</dimen>
+</resources>
