@@ -10,6 +10,7 @@
     android:id="@+id/main"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <!-- Отступы заданы через margin у дочерних элементов, а не padding у корня:
          padding корня занимают отступы под системные панели (см. MainActivity) -->
 
