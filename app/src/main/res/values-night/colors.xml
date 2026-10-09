@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Поисковая строка в тёмной теме: белое поле -->
+    <color name="search_field_bg">#FFFFFF</color>
+    <color name="search_hint">#1A1B22</color>
+</resources>
