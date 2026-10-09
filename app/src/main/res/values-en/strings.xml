@@ -14,4 +14,15 @@
     <string name="share_app">Share the app</string>
     <string name="write_to_support">Contact support</string>
     <string name="user_agreement">User agreement</string>
+
+    <!-- Intents: share, e-mail, user agreement -->
+    <string name="share_app_text">https://practicum.yandex.ru/android-developer/</string>
+    <string name="support_subject">Message to the developers of the Playlist Maker app</string>
+    <string name="support_body">Thanks to the developers for the cool app!</string>
+    <string name="user_agreement_url">https://yandex.ru/legal/practicum_offer/</string>
+
+    <!-- Search screen -->
+    <string name="search_hint">Search</string>
+    <string name="clear_search">Clear search query</string>
+    <string name="no_app_found">No app found for this action</string>
 </resources>

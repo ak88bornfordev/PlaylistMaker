@@ -5,4 +5,9 @@
     <color name="yp_white">#FFFFFF</color>
     <color name="yp_black">#1A1B22</color>
     <color name="yp_gray">#AEAFB4</color>
+    <color name="yp_light_gray">#E6E8EB</color>
+
+    <!-- Поисковая строка (в values-night свои значения) -->
+    <color name="search_field_bg">#E6E8EB</color>
+    <color name="search_hint">#AEAFB4</color>
 </resources>

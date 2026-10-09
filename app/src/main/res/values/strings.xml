@@ -7,10 +7,22 @@
     <string name="media_library">Медиатека</string>
     <string name="settings">Настройки</string>
 
-    <!-- Экран настроек -->
-    <string name="back">Назад</string>
+    <!-- Настройки -->
     <string name="dark_theme">Тёмная тема</string>
     <string name="share_app">Поделиться приложением</string>
     <string name="write_to_support">Написать в поддержку</string>
     <string name="user_agreement">Пользовательское соглашение</string>
+
+    <!-- Intent: шаринг, почта, оферта -->
+    <string name="share_app_text">https://practicum.yandex.ru/android-developer/</string>
+    <string name="support_email">shakirova.alina.1504@gmail.com</string>
+    <string name="support_subject">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
+    <string name="support_body">Спасибо разработчикам и разработчицам за крутое приложение!</string>
+    <string name="user_agreement_url">https://yandex.ru/legal/practicum_offer/</string>
+
+    <!-- Поиск -->
+    <string name="search_hint">Поиск</string>
+    <string name="clear_search">Очистить поисковый запрос</string>
+    <string name="back">Назад</string>
+    <string name="no_app_found">Нет приложения для этого действия</string>
 </resources>
