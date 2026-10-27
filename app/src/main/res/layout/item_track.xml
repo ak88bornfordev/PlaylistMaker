@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Элемент списка треков. Размеры по макету Figma (экран 360dp) -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/track_item_height"
+    android:background="?attr/selectableItemBackground"
+    android:paddingStart="@dimen/track_item_padding_start"
+    android:paddingEnd="@dimen/padding_medium">
+
+    <!-- Обложка 45x45, углы скругляет Glide (RoundedCorners) -->
+    <ImageView
+        android:id="@+id/ivArtwork"
+        android:layout_width="@dimen/track_artwork_size"
+        android:layout_height="@dimen/track_artwork_size"
+        android:contentDescription="@string/track_artwork_description"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_track_placeholder" />
+
+    <!-- Название трека: длинное обрезается точками -->
+    <TextView
+        android:id="@+id/tvTrackName"
+        style="@style/TrackTitleTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginEnd="@dimen/padding_small"
+        app:layout_constraintBottom_toTopOf="@id/tvArtistName"
+        app:layout_constraintEnd_toStartOf="@id/ivArrow"
+        app:layout_constraintStart_toEndOf="@id/ivArtwork"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Smells Like Teen Spirit" />
+
+    <!-- Исполнитель: сжимается и обрезается точками, точка и время остаются на месте -->
+    <TextView
+        android:id="@+id/tvArtistName"
+        style="@style/TrackInfoTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_marginTop="@dimen/track_info_margin_top"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivDot"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/ivArtwork"
+        app:layout_constraintTop_toBottomOf="@id/tvTrackName"
+        tools:text="Nirvana" />
+
+    <!-- Разделитель-точка 13x13 -->
+    <ImageView
+        android:id="@+id/ivDot"
+        android:layout_width="@dimen/track_dot_size"
+        android:layout_height="@dimen/track_dot_size"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_dot"
+        app:layout_constraintBottom_toBottomOf="@id/tvArtistName"
+        app:layout_constraintEnd_toStartOf="@id/tvTrackTime"
+        app:layout_constraintStart_toEndOf="@id/tvArtistName"
+        app:layout_constraintTop_toTopOf="@id/tvArtistName"
+        app:tint="?attr/colorSecondaryVariant" />
+
+    <!-- Продолжительность трека -->
+    <TextView
+        android:id="@+id/tvTrackTime"
+        style="@style/TrackInfoTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_small"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvArtistName"
+        app:layout_constraintEnd_toStartOf="@id/ivArrow"
+        app:layout_constraintStart_toEndOf="@id/ivDot"
+        tools:text="5:01" />
+
+    <!-- Стрелка "вперёд" 24x24 (та же иконка, что на экране настроек) -->
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_arrow_forward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="?attr/colorSecondaryVariant" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

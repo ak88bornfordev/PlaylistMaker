@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Плейсхолдер обложки (нет интернета / ошибка загрузки): нота на светло-сером фоне -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="45dp"
+    android:height="45dp"
+    android:viewportWidth="45"
+    android:viewportHeight="45">
+    <path
+        android:fillColor="@color/yp_light_gray"
+        android:pathData="M2,0h41a2,2 0,0 1,2 2v41a2,2 0,0 1,-2 2h-41a2,2 0,0 1,-2 -2v-41a2,2 0,0 1,2 -2z" />
+    <path
+        android:fillColor="@color/yp_gray"
+        android:pathData="M28.5,12L19,14.2v12.1c-0.6,-0.3 -1.3,-0.4 -2,-0.4c-2.2,0 -4,1.6 -4,3.5s1.8,3.5 4,3.5s4,-1.6 4,-3.5V18.6l5.5,-1.3v6.9c-0.6,-0.3 -1.3,-0.4 -2,-0.4c-2.2,0 -4,1.6 -4,3.5s1.8,3.5 4,3.5s4,-1.6 4,-3.5V12z" />
+</vector>
