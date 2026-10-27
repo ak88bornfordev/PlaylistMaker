@@ -25,5 +25,4 @@
     <string name="clear_search">Очистить поисковый запрос</string>
     <string name="back">Назад</string>
     <string name="no_app_found">Нет приложения для этого действия</string>
-    <string name="track_artwork_description">Обложка трека</string>
 </resources>

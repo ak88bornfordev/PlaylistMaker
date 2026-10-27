@@ -10,7 +10,6 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 
 class SearchActivity : AppCompatActivity() {
 
@@ -28,10 +27,6 @@ class SearchActivity : AppCompatActivity() {
         val clearButton = findViewById<ImageView>(R.id.clearButton)
 
         findViewById<ImageButton>(R.id.back_button).setOnClickListener { finish() }
-
-        // Список треков: пока показываем мок-данные, позже заменим на ответ сервера
-        val tracksRecyclerView = findViewById<RecyclerView>(R.id.tracksRecyclerView)
-        tracksRecyclerView.adapter = TrackAdapter(MockTracks.tracks)
 
         // Кнопка "Очистить": стираем текст и прячем клавиатуру
         clearButton.setOnClickListener {

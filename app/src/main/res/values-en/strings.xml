@@ -25,5 +25,4 @@
     <string name="search_hint">Search</string>
     <string name="clear_search">Clear search query</string>
     <string name="no_app_found">No app found for this action</string>
-    <string name="track_artwork_description">Track artwork</string>
 </resources>

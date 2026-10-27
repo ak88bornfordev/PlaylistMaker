@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -42,13 +41,4 @@
             android:visibility="gone"
             tools:visibility="visible" />
     </FrameLayout>
-
-    <!-- Список треков (пока на мок-данных) -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tracksRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/tracks_list_margin_top"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_track" />
 </LinearLayout>
