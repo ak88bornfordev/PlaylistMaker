@@ -1,9 +1,27 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Светлая тема. Свои цвета раздаём через цветовые атрибуты,
+         чтобы в values-night достаточно было поменять только их. -->
     <style name="Base.Theme.PlaylistMaker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/yp_blue</item>
+        <item name="colorPrimaryVariant">@color/yp_blue</item>
+        <item name="colorOnPrimary">@color/yp_white</item>
+
+        <!-- Фон экранов и основной цвет текста/иконок -->
+        <item name="colorSecondary">@color/yp_white</item>
+        <item name="colorOnSecondary">@color/yp_black</item>
+        <item name="colorSecondaryVariant">@color/yp_gray</item>
+
+        <item name="android:windowBackground">@color/yp_white</item>
+        <item name="android:statusBarColor">@color/yp_white</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.PlaylistMaker" parent="Base.Theme.PlaylistMaker" />
+
+    <!-- Главный экран: синий фон в светлой теме -->
+    <style name="Theme.PlaylistMaker.Main" parent="Theme.PlaylistMaker">
+        <item name="android:windowBackground">@color/yp_blue</item>
+        <item name="android:statusBarColor">@color/yp_blue</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
 </resources>
