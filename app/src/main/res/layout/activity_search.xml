@@ -97,10 +97,10 @@
                 android:minHeight="0dp"
                 android:text="@string/retry"
                 android:textAllCaps="false"
-                android:textColor="@color/yp_white"
+                android:textColor="?attr/colorSecondary"
                 android:textSize="14sp"
                 android:visibility="gone"
-                app:backgroundTint="@color/yp_blue"
+                app:backgroundTint="?attr/colorOnSecondary"
                 app:cornerRadius="18dp"
                 tools:visibility="visible" />
         </LinearLayout>
