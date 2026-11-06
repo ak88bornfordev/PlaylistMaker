@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Нужно Glide для загрузки обложек треков -->
+    <!-- Для поисковых запросов и загрузки обложек треков -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application

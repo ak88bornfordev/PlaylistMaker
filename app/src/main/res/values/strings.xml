@@ -26,4 +26,7 @@
     <string name="back">Назад</string>
     <string name="no_app_found">Нет приложения для этого действия</string>
     <string name="track_artwork_description">Обложка трека</string>
+    <string name="nothing_found">Ничего не нашлось</string>
+    <string name="connection_error">Проблемы со связью\n\nЗагрузка не удалась. Проверьте ваше подключение к интернету</string>
+    <string name="retry">Обновить</string>
 </resources>
