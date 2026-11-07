@@ -5,15 +5,33 @@
     android:viewportHeight="120">
     <path
         android:fillColor="?attr/colorOnSecondary"
-        android:fillType="evenOdd"
-        android:pathData="M60,10A50,50 0,1 0,60 110A50,50 0,1 0,60 10M60,18A42,42 0,1 1,60 102A42,42 0,1 1,60 18" />
+        android:pathData="M47,34L88,21V80H80V35L55,43V77H47Z" />
+    <group
+        android:pivotX="34"
+        android:pivotY="82"
+        android:rotation="20">
+        <path
+            android:fillColor="?attr/colorOnSecondary"
+            android:pathData="M24,82A10,14 0,1 0,44 82A10,14 0,1 0,24 82Z" />
+    </group>
+    <group
+        android:pivotX="78"
+        android:pivotY="90"
+        android:rotation="20">
+        <path
+            android:fillColor="?attr/colorOnSecondary"
+            android:pathData="M67,90A11,15 0,1 0,89 90A11,15 0,1 0,67 90Z" />
+    </group>
     <path
-        android:fillColor="?attr/colorOnSecondary"
-        android:pathData="M40,42A6,6 0,1 0,40 54A6,6 0,1 0,40 42M80,42A6,6 0,1 0,80 54A6,6 0,1 0,80 42" />
+        android:fillColor="#FCD452"
+        android:pathData="M60,43A23,23 0,1 0,60 89A23,23 0,1 0,60 43Z" />
+    <path
+        android:fillColor="@color/yp_black"
+        android:pathData="M52,58A3,3 0,1 0,52 64A3,3 0,1 0,52 58M69,56A3,3 0,1 0,69 62A3,3 0,1 0,69 56" />
     <path
         android:fillColor="@android:color/transparent"
-        android:pathData="M36,86Q60,64 84,86"
-        android:strokeColor="?attr/colorOnSecondary"
+        android:pathData="M51,79Q60,68 70,75"
+        android:strokeColor="@color/yp_black"
         android:strokeLineCap="round"
-        android:strokeWidth="5" />
+        android:strokeWidth="3" />
 </vector>
