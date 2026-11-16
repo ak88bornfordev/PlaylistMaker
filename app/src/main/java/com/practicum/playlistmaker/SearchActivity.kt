@@ -33,8 +33,16 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var placeholderImage: ImageView
     private lateinit var placeholderText: TextView
     private lateinit var retryButton: Button
+    private lateinit var historyLayout: View
+    private lateinit var searchHistory: SearchHistory
 
-    private val trackAdapter = TrackAdapter()
+    private val trackAdapter = TrackAdapter { track ->
+        searchHistory.addTrack(track)
+    }
+    private val historyAdapter = TrackAdapter { track ->
+        searchHistory.addTrack(track)
+        updateSearchHistoryVisibility()
+    }
     private val iTunesApi: ITunesApi by lazy {
         Retrofit.Builder()
             .baseUrl(ITUNES_BASE_URL)
@@ -54,11 +62,24 @@ class SearchActivity : AppCompatActivity() {
         placeholderImage = findViewById(R.id.placeholderImage)
         placeholderText = findViewById(R.id.placeholderText)
         retryButton = findViewById(R.id.retryButton)
+        historyLayout = findViewById(R.id.historyLayout)
+        val historyRecyclerView = findViewById<RecyclerView>(R.id.historyRecyclerView)
+        val clearHistoryButton = findViewById<Button>(R.id.clearHistoryButton)
         val clearButton = findViewById<ImageView>(R.id.clearButton)
 
+        searchHistory = SearchHistory(
+            getSharedPreferences(SEARCH_HISTORY_PREFERENCES, MODE_PRIVATE)
+        )
         tracksRecyclerView.adapter = trackAdapter
+        historyRecyclerView.adapter = historyAdapter
 
         findViewById<ImageButton>(R.id.back_button).setOnClickListener { finish() }
+
+        clearHistoryButton.setOnClickListener {
+            searchHistory.clear()
+            historyAdapter.updateTracks(emptyList())
+            historyLayout.visibility = View.GONE
+        }
 
         clearButton.setOnClickListener {
             searchEditText.setText("")
@@ -80,6 +101,10 @@ class SearchActivity : AppCompatActivity() {
             }
         }
 
+        searchEditText.setOnFocusChangeListener { _, _ ->
+            updateSearchHistoryVisibility()
+        }
+
         val searchTextWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
 
@@ -89,6 +114,7 @@ class SearchActivity : AppCompatActivity() {
                 if (s.isNullOrEmpty()) {
                     clearSearchResults()
                 }
+                updateSearchHistoryVisibility()
             }
 
             override fun afterTextChanged(s: Editable?) = Unit
@@ -194,6 +220,17 @@ class SearchActivity : AppCompatActivity() {
         placeholderLayout.visibility = View.GONE
     }
 
+    private fun updateSearchHistoryVisibility() {
+        if (!searchEditText.hasFocus() || searchEditText.text.isNotEmpty()) {
+            historyLayout.visibility = View.GONE
+            return
+        }
+
+        val historyTracks = searchHistory.getTracks()
+        historyAdapter.updateTracks(historyTracks)
+        historyLayout.visibility = if (historyTracks.isEmpty()) View.GONE else View.VISIBLE
+    }
+
     private fun cancelCurrentCall() {
         val call = currentCall
         currentCall = null
@@ -211,6 +248,7 @@ class SearchActivity : AppCompatActivity() {
     companion object {
         private const val SEARCH_TEXT_KEY = "SEARCH_TEXT"
         private const val SEARCH_TEXT_DEF = ""
+        private const val SEARCH_HISTORY_PREFERENCES = "search_history_preferences"
         private const val ITUNES_BASE_URL = "https://itunes.apple.com"
     }
 }
