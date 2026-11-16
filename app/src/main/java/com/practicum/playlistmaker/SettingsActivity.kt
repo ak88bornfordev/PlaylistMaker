@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.switchmaterial.SwitchMaterial
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -18,6 +19,12 @@ class SettingsActivity : AppCompatActivity() {
         findViewById<View>(R.id.root).applySystemBarsPadding()
 
         findViewById<ImageButton>(R.id.back_button).setOnClickListener { finish() }
+
+        val themeSwitcher = findViewById<SwitchMaterial>(R.id.themeSwitcher)
+        themeSwitcher.isChecked = (applicationContext as App).darkTheme
+        themeSwitcher.setOnCheckedChangeListener { switcher, checked ->
+            (applicationContext as App).switchTheme(checked)
+        }
 
         // "Поделиться приложением" - неявный Intent ACTION_SEND + системный диалог выбора
         findViewById<TextView>(R.id.shareButton).setOnClickListener {

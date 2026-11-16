@@ -19,9 +19,8 @@
             android:text="@string/settings" />
     </LinearLayout>
 
-    <!-- Тёмная тема: пока только переключатель, логика будет в следующих спринтах -->
     <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/themeSwitch"
+        android:id="@+id/themeSwitcher"
         style="@style/SettingsSwitchStyle"
         android:layout_marginTop="24dp"
         android:text="@string/dark_theme" />
